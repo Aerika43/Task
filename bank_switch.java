@@ -1,64 +1,70 @@
 package Task;
 
 import java.util.Scanner;
-//class page_1
-//{
-//    public int a;
-//    void register_login()
-//    {
-//    Scanner sc1 = new Scanner(System.in);
-//    String name;
-//    int AccNo;
-//    int mob;
-//    int pass;
-//     
-//    System.out.println("Do you want to 1.Register or 2.Login?");
-//    int rl = sc1.nextInt();
-//    switch(rl)
-//    {
-//        case 1:
-//            System.out.println("Enter Name: ");
-//             name = sc1.next();
-//            System.out.println("Enter Account Number: ");
-//             AccNo = sc1.nextInt();
-//            System.out.println("Enter Moblie Number: ");
-//             mob = sc1.nextInt();
-//            System.out.println("Registration Successful...");
-//            break;
-//        case 2:
-//            System.out.println("Account Number : ");
-//            AccNo = sc1.nextInt();
-//            System.out.println("Password : ");
-//            pass = sc1.nextInt();
-//            System.out.println("Login Successful...");
-//    }
-//    }
-//}
-class Sign_in //extends page_1
+class page_1
 {
-  public int AccNo;
-         int Password;
-    void getdata()
-        {
-            Scanner sc2 = new Scanner(System.in);
-            
-            System.out.println("Account Number: ");
-            AccNo = sc2.nextInt();
-            
-            System.out.println("Password: ");
-            Password = sc2.nextInt();
-            
+    public int a;
+    int AccNo;
+    int mob;
+    int Password;
+    String name;
+    void register_login()
+    {
+    Scanner sc1 = new Scanner(System.in);
+    
+    System.out.println("Do you want to 1.Register or 2.Login?");
+    int rl = sc1.nextInt();
+    switch(rl)
+    {
+        case 1:
+            System.out.println("Enter Name: ");
+             name = sc1.next();
+            System.out.println("Enter Account Number: ");
+             AccNo = sc1.nextInt();
+             System.out.println("Create Password : ");
+             Password = sc1.nextInt();
+            System.out.println("Enter Moblie Number: ");
+             mob = sc1.nextInt();
+            System.out.println("Registration Successful...");
+            break;
+        case 2:
+            System.out.println("Account Number : ");
+             AccNo = sc1.nextInt();
+            System.out.println("Enter Name: ");
+             name = sc1.next();
+            System.out.println("Password : ");
+             Password = sc1.nextInt();
+            System.out.println("Login Successful...");
             System.out.println("Account Verified!");
-        }
+              
+    }
+    }
 }
+//class Sign_in //extends page_1
+//{
+//  public int AccNo;
+//         int Password;
+//    void getdata()
+//        {
+//            Scanner sc2 = new Scanner(System.in);
+//            
+//            System.out.println("Account Number: ");
+//            AccNo = sc2.nextInt();
+//            
+//            System.out.println("Password: ");
+//            Password = sc2.nextInt();
+//            
+//            System.out.println("Account Verified!");
+//        }
+//}
 
-class Display extends Sign_in
+class Display extends page_1
 {
     public void bankshow()
     {
         System.out.println("Account Number: "+AccNo);
         System.out.println("Account Password: "+Password);
-        System.out.println("Accountant Name: Aerika Talaviya");
+        System.out.println("Accountant Name: "+name);
         System.out.println("Total Bank Balance: 850000");
          
     }
@@ -149,6 +155,8 @@ class Money extends Display
                     break;
             case 6:
                 System.out.println("Exiting");
+                System.out.println("Thankyou!!");
+                System.out.println("Have a Nice Day!!");
                 break;    
             } 
     }
@@ -160,8 +168,8 @@ public class bank_switch {
         Scanner sc = new Scanner(System.in);
         Money m = new Money();
 
-       //m.register_login();
-        m.getdata();        
+        m.register_login();
+//        m.getdata();        
         m.bankshow();
         m.money();   
 }
