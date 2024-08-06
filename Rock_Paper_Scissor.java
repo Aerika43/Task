@@ -18,7 +18,7 @@ public class Rock_Paper_Scissor {
         
         String user;
         int user_index;
-        System.out.println("Make a move! (rock/paper/scissors)");
+        System.out.println("Make a move! (Rock/Paper/Scissors)");
         String user_move = sc.nextLine();
                 
         Random r = new Random();
